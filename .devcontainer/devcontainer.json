@@ -1,0 +1,22 @@
+{
+    "name": "ESP-IDF ESP32-C3 Escolar",
+    // Usamos una imagen base ligera de Linux (Ubuntu)
+    "image": "://microsoft.com",
+    
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                // Preinstala la extensión oficial de Espressif para programar en C nativo
+                "espressif.esp-idf-extension"
+            ],
+            "settings": {
+                // Configuraciones recomendadas para automatizar el entorno escolar
+                "espIdf.toolsIncomplete": false,
+                "espIdf.flashType": "UART"
+            }
+        }
+    },
+    // Habilita los permisos del contenedor para interactuar con puertos seriales/USB mediante la web
+    "runArgs": ["--privileged"],
+    "remoteUser": "vscode"
+}
